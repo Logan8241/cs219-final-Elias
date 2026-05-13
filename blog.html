@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Academic Portfolio</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Portfolio | Blog</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo"><strong>Portfolio</strong></div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Academic Blog</h1>
+      <p>
+        Insights, tutorials, conference notes, and academic discoveries.
+      </p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- SEARCH + FILTER -->
+    <section class="controls">
+
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search blog posts..."
+      />
+
+      <div class="filter-pills">
+        <button class="pill active" data-category="all">All</button>
+        <button class="pill" data-category="research">Research</button>
+        <button class="pill" data-category="tutorial">Tutorial</button>
+        <button class="pill" data-category="conference">Conference</button>
+        <button class="pill" data-category="career">Career</button>
+      </div>
+
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="featured-post">
+
+      <div class="featured-image">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="Featured Post"
+        />
+      </div>
+
+      <div class="featured-content">
+        <span class="featured-tag">Featured</span>
+
+        <h2>The Future of AI in Academic Research</h2>
+
+        <p>
+          Explore how AI is transforming modern academia through automated
+          literature reviews, data analysis, and collaborative research.
+        </p>
+
+        <a href="blog-post.html" class="btn">Read More</a>
+      </div>
+
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid" id="blogGrid">
+
+      <!-- CARD 1 -->
+      <article class="blog-card" data-category="research">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Research">
+        <div class="card-content">
+          <span class="category">Research</span>
+          <h3>Modern Research Methodologies</h3>
+          <p>
+            Discover reliable methods for conducting reproducible studies.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="blog-card" data-category="tutorial">
+        <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28" alt="Tutorial">
+        <div class="card-content">
+          <span class="category">Tutorial</span>
+          <h3>Data Visualization Basics</h3>
+          <p>
+            Learn how to create impactful visual presentations for data.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="blog-card" data-category="conference">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Conference">
+        <div class="card-content">
+          <span class="category">Conference</span>
+          <h3>Highlights from IEEE 2026</h3>
+          <p>
+            Important trends and innovations discussed at this year’s event.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="blog-card" data-category="career">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Career">
+        <div class="card-content">
+          <span class="category">Career</span>
+          <h3>Building an Academic Career</h3>
+          <p>
+            Strategies for networking, publishing, and securing grants.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+      <!-- CARD 5 -->
+      <article class="blog-card" data-category="tutorial">
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Tutorial">
+        <div class="card-content">
+          <span class="category">Tutorial</span>
+          <h3>Python for Researchers</h3>
+          <p>
+            Automate your academic workflows with beginner-friendly Python.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+      <!-- CARD 6 -->
+      <article class="blog-card" data-category="research">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" alt="Research">
+        <div class="card-content">
+          <span class="category">Research</span>
+          <h3>Academic Writing Techniques</h3>
+          <p>
+            Improve structure, readability, and citations in your papers.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- PAGINATION -->
+    <section class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">Next</button>
+    </section>
+
+    <script src="blogscript.js"></script>
+
+  </main>
+  </body>
+  </html>

@@ -1,0 +1,62 @@
+const pills = document.querySelectorAll(".pill");
+const cards = document.querySelectorAll(".blog-card");
+const searchInput = document.getElementById("searchInput");
+
+/* FILTER BUTTONS */
+
+pills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+
+    document.querySelector(".pill.active")
+      .classList.remove("active");
+
+    pill.classList.add("active");
+
+    filterPosts();
+  });
+});
+
+/* SEARCH */
+
+searchInput.addEventListener("input", filterPosts);
+
+/* FILTER FUNCTION */
+
+function filterPosts() {
+
+  const activeCategory =
+    document.querySelector(".pill.active").dataset.category;
+
+  const searchText =
+    searchInput.value.toLowerCase();
+
+  cards.forEach((card) => {
+
+    const category = card.dataset.category;
+
+    const title =
+      card.querySelector("h3")
+      .textContent
+      .toLowerCase();
+
+    const description =
+      card.querySelector("p")
+      .textContent
+      .toLowerCase();
+
+    const matchesCategory =
+      activeCategory === "all" ||
+      category === activeCategory;
+
+    const matchesSearch =
+      title.includes(searchText) ||
+      description.includes(searchText);
+
+    if (matchesCategory && matchesSearch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+}
